@@ -1,0 +1,13 @@
+// Copy the bubbles from translation here.
+{
+  "Changes": [
+    {
+      "LogName": "Speech Bubbles, French Translation", //Change LogName to whatever translation you're doing
+      "Action": "EditData",
+      "Target": "Strings/SpeechBubbles",
+      "Entries": {
+		  //Copy bubbles here
+	  },
+    },
+  ]
+}

@@ -1,0 +1,45 @@
+// Speech bubbles are essentially mobile textAboveHead. They have a random chance of being played upon entering an area, but are not long lines.
+// Bubbles are also much less variable normally. If you want to patch them in with similar conditions as the Dialogues file, you'll need to run Content Patcher conditions in a When field.
+//Put lines between the "",
+{
+  "Changes": [
+    {
+      "LogName": "<character> NPC Adventure Speech Bubbles",
+      "Action": "EditData",
+      "Target": "Strings/SpeechBubbles",
+      "Entries": {
+		"ambient_Forest_<character>": "",
+		"ambient_WizardHouse_<character>": "",
+		"ambient_Mountain_<character>": "",
+		"ambient_Beach_<character>": "",
+		"ambient_Desert_<character>": "",
+		"ambient_SeedShop_<character>": "",
+		"ambient_ArchaeologyHouse_<character>": "",
+		"ambient_IslandSouth_<character>": "",
+		"ambient_IslandNorth_<character>": "",
+		"ambient_Railroad_<character>": "",
+		"ambient_Mine_<character>": "",
+		"ambient_Mine_<character>~1": "",
+		"ambient_Mine_<character>~2": "",
+		"ambient_Mine_<character>~3": "",
+		"ambient_Town_<character>": "",
+		"ambient_Town_<character>~1": "",
+		"ambient_Saloon_<character>": "",
+		"ambient_Saloon_<character>~1": "",
+		
+		//Fight bubbles, used if the character goes in combat. I'd write these regardless of if a character fights - if they don't, write them as the character being scared of combat/not fighting, in case they trigger. Juliet examples below.
+		"fight_<character>": "Looks like someone wanted a fight!",
+		"fight_<character>~1": "Let's not mention this to Jessie.",
+		"fight_<character>~2": "Hey, @, how many have you taken down?",
+		"fight_<character>~3": "Now this is my kind of day!",
+		"fight_<character>~4": "Let's dance!",
+		
+		//Other mod lines - like in Dialogues, write as character visiting, don't invent lore.
+		"ambient_Custom_CrimsonBadlands_<character>": "",
+		"ambient_Custom_Ridgeside_RidgesideVillage_<character>": "",
+		"ambient_Custom_EastScarpeInn_<character>": "",
+		"ambient_Custom_LK_LodgingHouse_<character>": "",
+      },
+    },
+  ]
+}

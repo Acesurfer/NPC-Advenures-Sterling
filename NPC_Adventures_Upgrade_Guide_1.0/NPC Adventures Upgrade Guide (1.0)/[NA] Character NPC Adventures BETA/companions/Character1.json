@@ -1,0 +1,81 @@
+//Welcome to the final, and arguably the worst, file. You will need every file not used from your prior NPC Adventures pack here.
+//You will need the name of your animations from AnimationDescriptions, your buffs values, your weapons descriptions, your i18n key for the buff description, and potentially your CompanionDisposition.
+//Before continuing with this file, copy it for as many characters you have. If this is your only one, continue! Remember to replace Character with the name of your NPC.
+{
+  "Format": "2.0",
+  "Name": "Character",
+  "Skills": [
+  //Give your character one or more skills. The example below is a forager/fighter.
+    { "Name": "forager" },
+    { "Name": "fighter" }
+	//Since you're upgrading, the simplest way is to just define a base skill and not modify its other values, listed at https://next.npcadventures.dev/docs/modding/skills.
+	//If character is a Doctor, Fighter/Warrior (merged in this version, set IsWarrior to true for Warrior Perk), Scared, Shooter, or Charmer, then there is extra if you'd like to edit. Otherwise, this is as before.
+	//Warriors will need to refer to the documentation, as the merged class has some extra steps.
+  ],
+  "Rules": {
+    //The fun part! Specify rules for recruiting the companion. Marriageable companions are recommended to have a condition that refuses them or an entire subsection of dialogue goes unused (and may be out of character).
+	
+	/* Marriage */
+
+    // Character will always go on an adventure, unless you've pissed her off (below 8 hearts)
+    "O Character/!f Character 2000": "reject companionRejected_Spouse",
+    "O Character": "accept",
+
+    //Otherwise, specify something here to prevent recruitment without something. The example here was 5+ hearts, but the vanilla companions are locked off via heart events instead in this version.
+	//If you don't care and want them to always be recruitable, this is where you do it.
+	
+	/* Regular */
+
+    // Requires Character to be at 5 hearts or more
+    "!f Character 1250": "reject",
+    
+    // She is recruitable anytime
+    "": "accept"
+  },
+  
+  //If you'd prefer to merge characters needing to be paid for, unlocked by mail, etc. do so here. Instructions at https://next.npcadventures.dev/docs/modding/freelancers
+  
+  "Buffs": {
+    //Unlike in the prior version, this is not defined on a single line with specific numbers, but it's easier to read!
+	//Potential buffs are Farming, Fishing, Mining, Farming, Foraging, Crafting, MaxStamina (MaxEnergy in game), MagneticRadius, Speed, Defense, and Attack. Crafting is 1.6, I don't know what that is, but it's there.
+	//Any other buff values are not valid and will be ignored (as well as if you use MaxEnergy instead of MaxStamina)
+	"Mining": 2,
+	"Speed": 2,
+	"MaxStamina": 50,
+  },
+  "BuffsDescription": "[Character.buffs]", //i18n key. Could just write it, honestly.
+  
+  
+  "Weapons": {
+	 // As before. Merge the weapons in here, but only list each weapon once. It will use the highest available, e.g. if you're at combat 6, it will use Insect Head.
+	 // If your character did not have a weapons sheet, either make one with weapons corresponding or just put something in the slot for "0" and delete the rest and it will apply to all future levels.
+    "0": "Wooden Blade",
+    "2": "Forest Sword",
+    "5": "Insect Head",
+    "7": "Bone Sword",
+    "8": "Neptune's Glaive",
+    "9": "Ossified Blade"
+  },
+  "IdleBehaviors": [
+    //Merged from IdleBehaviors and IdleNPCDefinitions. Put the character animations in here - I don't know if it will allow custom ones without CP pack, but it will read the correct animation from the character file.
+	//If no animations, delete this part (NOT the lookaround). Otherwise, define the animations, preferably in the NPC file, otherwise in the CP file.
+	{
+      "Behavior": "Animate",
+      "Animations": [
+        "Character_yoyo"
+      ],
+      "Tendency": 3,
+      "MinDuration": 10,
+      "MaxDuration": 30
+    },
+    //Leave this alone, for simplicity. Just defines an extra idle behavior.
+	{
+      "Behavior": "Lookaround",
+      "FaceMinSeconds": 6,
+      "FaceMaxSeconds": 10,
+      "Tendency": 2.5,
+      "MinDuration": 10,
+      "MaxDuration": 30
+    }
+	]
+}

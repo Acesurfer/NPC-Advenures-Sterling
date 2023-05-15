@@ -1,0 +1,21 @@
+//This is an *example* content.json. See the upgrade readme for anything more on this.
+//Remove the period from this file once finished translating!
+{
+	"Changes": [
+		{
+			"LogName": "Translation Mail",
+			"Action": "Include",
+			"FromFile": "Locale/{{language}}/Data/Mail.json"
+		},
+		{
+			"LogName": "Translation Dialogues",
+			"Action": "Include",
+			"FromFile": "Locale/{{language}}/Dialogues/Dialogue.json"
+		},
+		{
+			"LogName": "Translation Bubbles",
+			"Action": "Include",
+			"FromFile": "Locale/{{language}}/Dialogues/SpeechBubbles.json"
+		},
+	],
+}

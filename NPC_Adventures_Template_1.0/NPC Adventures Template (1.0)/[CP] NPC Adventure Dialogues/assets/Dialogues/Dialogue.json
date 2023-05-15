@@ -1,0 +1,116 @@
+//Welcome to the Dialogue json! Below are *several* example lines for various places, vanilla and modded. You can add your own with relevant conditions!
+//A fairly exhaustive list of conditions are in the docs at https://next.npcadventures.dev/docs/modding/dialogues . The below is mostly basic stuff.
+
+//You have a choice at this point - you can put all the changes in this file, or you can make several jsons for different characters. If you do, return to content.json and write in the includes.
+{
+  "Changes": [
+    {
+      "LogName": "Companion dialogues for <character>",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/<character>",
+      "Entries": {
+		//The first section must be filled out.
+		
+		//Normal <character> Lines
+		"companionAccepted": "", //Becomes your companion
+		"companionRejected": "", //Rejects player
+		"companionRejectedNight": "", //Rejects player in case they manage to ask past 10pm
+		"companionDismiss": "", //Player doesn't want them to follow anymore
+		"companionDismissAuto": "", //10pm is reached while companion is adventuring
+		"companionRecruited": "", //Line character will say upon recruitment
+ 
+		"companionSuggest": "", //Random chance: Character asks to adventure with player
+		"companionSuggest_Yes": "", //Player accepts
+		"companionSuggest_No": "", //Player refuses
+  
+		//The following two sections are optional variants. If they aren't datable, remove them - if they are, you can use this to give different lines when adventuring with their significant other/spouse.
+		
+		//Dating <character> Lines
+		"companionAccepted_Dating": "",
+		"companionRejected_Dating": "",
+		"companionRejectedNight_Dating": "",
+		"companionDismiss_Dating": "",
+	    "companionDismissAuto_Dating": "",
+		"companionRecruited_Dating": "",
+  
+  
+		"companionSuggest_Dating": "",
+		"companionSuggest_Yes_Dating": "",
+		"companionSuggest_No_Dating": "",
+
+		//Spouse <character> Lines
+		"companionAccepted_Spouse": "",
+		"companionRejected_Spouse": "",
+		"companionRejectedNight_Spouse": "",
+		"companionDismiss_Spouse": "",
+		"companionDismissAuto_Spouse": "",
+		"companionRecruited_Spouse": "",
+		
+		"companionSuggest_Spouse": "",
+		"companionSuggest_Yes_Spouse": "",
+		"companionSuggest_No_Spouse": "",
+		
+		//Forage Lines! If your character is a forager, these are necessary. If not, delete this section!
+		"farmerRunAway": "", //Farmer somehow manages to get out of the forage dialogue (backup)
+		"giveForages": "", //Repeated line whenever giving a forage. Even with a CP random token, will only swap the next day.
+			//Optional dating and spouse variants below
+		"farmerRunAway_Dating": "",
+		"giveForages_Dating": "",
+		
+		"farmerRunAway_Spouse": "",
+	    "giveForages_Spouse": "",
+		
+		//Doctor Lines! If your character is a Doctor, these are necessary. If not, delete this section!
+		
+		"heal": "", //Heals farmer
+		"nomedkits": "", //Out of medkits
+			//Optional dating and spouse variants below.
+		"heal_Dating": "",
+		"nomedkits_Dating": "",
+
+		"heal_Spouse": "",
+		"nomedkits_Spouse": "",
+
+		//Beyond this line is just lines for every area. Refer to link above for potential conditions.
+		//I've given lines for Farm, Skull Cavern, and a few spouse variations for vanilla, etc. Feel free to change them. These are just examples, done from an example of my original mod (Juliet), plus a few bonus ones.
+
+		//Location specific (Vanilla)
+
+		"companion_Farm": "",
+		"companion_Farm~1": "", //~# is a variate dialogue. You can have as many as you'd like.
+		"companion_Farm_Spouse": "",
+		"companion_Mine": "",
+		"companion_Mine_Spouse": "",
+		"companion_Town_winter_snowy_Spouse14": "", //A lot of conditions, for an example. This will only be said in town, when it's winter, when it's snowing, when the character is your spouse and has 14 hearts.
+		"companion_Town_Night": "",
+		"companion_Town_fall": "",
+		"companion_Town_fall_Rainy": "",
+		"companion_SkullCave": "",
+		"companion_SkullCave_Spouse": "",
+  
+		//Location Specific (<character>'s mod)
+
+		"companion_Custom_LK_ClearingHouse": "",
+		"companion_Custom_LK_ClearingHouse_Spouse": "",
+		"companion_Custom_LK_LodgingHouse": "", //Juliet's place, in this case. Always prefix with Custom the locations
+		"companion_Custom_LK_LodgingHouse_Spouse": "",
+
+
+		//Location Specific (Other mod compat).
+		//Write these how the character in question would react to being brought to these places, but careful not to step on toes and invent lore without the creator's permission!
+
+		"companion_Custom_EastScarpeInn": "", //East Scarp Inn, ES
+		"companion_Custom_EastScarpeInn_Spouse": "",
+		"companion_Custom_ESVetHouse": "",
+		"companion_Custom_ESVetHouse_Spouse": "",
+		
+		"companion_Custom_CrimsonBadlands": "", //Crimson Badlands, SVE
+		"companion_Custom_Ridgeside_RidgesideVillage": "",
+		"companion_Custom_Ridgeside_RidgesideVillage_Spouse": "",
+		"companion_Custom_Ridgeside_RidgeForest": "",
+		"companion_Custom_Ridgeside_SummitFarm_Spouse": "", //Summit Farm, RSV
+      },
+    },
+	//Remember to copy the above for every character you write. If this is the only character, you're done!
+  ]
+}

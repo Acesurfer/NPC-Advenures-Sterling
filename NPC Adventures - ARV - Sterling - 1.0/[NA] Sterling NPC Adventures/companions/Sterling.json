@@ -1,0 +1,80 @@
+{
+    "Format": "2.0",
+    "Name": "Sterling",
+    "Skills": [
+      { "Name": "forager" },
+      { "Name": "fisherman" },
+      { "Name": "scared"},
+      { "Name": "charmer"}
+    ],
+
+    "Rules": {
+      //The fun part! Specify rules for recruiting the companion. Marriageable companions are recommended to have a condition that refuses them or an entire subsection of dialogue goes unused (and may be out of character).
+      
+      /* Marriage */
+  
+      // Character will always go on an adventure, unless you've pissed her off (below 8 hearts)
+      "O Character/!f Character 2000": "reject companionRejected_Spouse",
+      "O Character": "accept",
+  
+      //Otherwise, specify something here to prevent recruitment without something. The example here was 5+ hearts, but the vanilla companions are locked off via heart events instead in this version.
+      //You can use event preconditions to specify when, as well as their inverse (e.g. !z is "must be fall").
+      //If you don't care and want them to always be recruitable, this is where you do it. An example is provided from Sandy's beta pack.
+      
+      //Requires it to not be Fall 15
+      "u 15/!z fall": "reject companionRejected_Fall15",
+      
+      /* Regular */
+  
+      // Requires Character to be at 5 hearts or more
+      "!f Character 1250": "reject",
+      
+      // She is recruitable anytime
+      "": "accept"
+    },
+        
+    "Buffs": {
+      "Luck": 2,
+      "Speed": 2,
+      "MaxStamina": 50,
+    },
+    "BuffsDescription": "[Sterling.buffs]",
+    
+    
+    "Weapons": {
+       // Weapons! This will define how strong your character is, although they generally need a skill allowing them to be capable of fighting to actually utilize this section.
+       // 0 is the baseline weapon. 1-10 corresponds to the Player's combat level, so the companion will grow with them. If a level is not defined, the character will use the highest level weapon they can relative to player's level.
+       //(Example: If Player is combat 4, using the below, they would use a Forest Sword, as they cannot use Level 5's Insect Head yet.)
+       //If you don't want them to use weapons, you can delete this section.
+       
+       // Try to balance blade usage based on your character. If your character is a renowned adventurer, an Infinity Blade would make sense at 10! If they aren't, consider a lower tier weapon.
+      "0": "Wooden Blade",
+      "2": "Forest Sword",
+      "5": "Insect Head",
+      "7": "Bone Sword",
+      "8": "Neptune's Glaive",
+      "9": "Ossified Blade"
+    },
+    
+    "IdleBehaviors": [
+      {
+        "Behavior": "Animate",
+        "Animations": [
+          "SterlingHeadrub",
+          "SterlingSleep"
+        ],
+        "Tendency": 3,
+        "MinDuration": 10,
+        "MaxDuration": 30
+      },
+
+      {
+        "Behavior": "Lookaround",
+        "FaceMinSeconds": 6,
+        "FaceMaxSeconds": 10,
+        "Tendency": 2.5,
+        "MinDuration": 10,
+        "MaxDuration": 30
+      }
+      ]
+  }

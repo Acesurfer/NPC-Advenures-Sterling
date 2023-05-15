@@ -1,0 +1,16 @@
+//For this JSON, you should get your original Dialogue json. Literally speaking, you can just copy paste the log here for however many characters you have.
+//Remember to add any new dialogues you have due to special rejection responses in your NA file!
+
+//You have a choice at this point - you can put all the changes in this file, or you can make several jsons for different characters. If you do, return to content.json and write in the includes for each seperate JSON.
+{
+  "Changes": [
+    {
+      "LogName": "Companion dialogues for <character>",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/<character>",
+      "Entries": {
+		//Copy in dialogues here!
+      },
+    },
+  ]
+}

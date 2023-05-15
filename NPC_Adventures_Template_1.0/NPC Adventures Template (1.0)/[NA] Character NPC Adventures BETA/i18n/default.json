@@ -1,0 +1,7 @@
+{
+  //Companion buff descriptions
+  //As you may see here, this is really simple and can honestly be ignored if you don't want to deal with an i18n file. This is useful for translations, though.
+  //Otherwise, name it <character>.buffs and write a short description of your character's buffs! It'll be used shortly in the final file.
+  //The example below is from Juliet. Make sure the key matches the one in the companions file!
+  "<character>.buffs": "Something about Juliet and her devil-may-care attitude invigorates you and gives you a surge of adrenaline.#You gain +2 Speed, +2 Mining and a bonus of +50 maximum energy.",
+}

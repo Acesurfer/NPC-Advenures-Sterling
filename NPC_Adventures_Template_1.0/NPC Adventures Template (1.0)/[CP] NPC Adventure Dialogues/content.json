@@ -1,0 +1,43 @@
+//Content file! Delete sections you don't need (Swimsuits most likely, as well as Forages if not a forager) and title the lognames with your character or group's names.
+//Personally, I would advise simply replacing <character> with the character you're adding. If you're adding multiple characters, just combine them all in the relevant files.
+//Replace LogName as necessary. Do not include the Swimsuit portion unless necessary.
+
+{
+  "Format": "1.28.0",
+  "Changes": [
+    {
+      "Action": "Include",
+      "FromFile": "assets/Dialogues/Dialogue.json",
+      "LogName": "<character>'s Dialogue or <group> Dialogue Pack"
+    },
+	{
+      "Action": "Include",
+      "FromFile": "assets/Dialogues/SpeechBubbles.json",
+      "LogName": "<character>'s Speech Bubbles or <group> Speech Bubble Pack"
+    },
+	{
+      "Action": "Include",
+      "FromFile": "assets/Data/Mail.json",
+      "LogName": "<character>'s Mail or <group> Mail Pack"
+    },
+	/*{ //Only include this section if your character is a Forager and you want to add custom forages.
+      "Action": "Include",
+      "FromFile": "assets/Data/Forages.json",
+      "LogName": "<character>'s Forages or <group> Forages"
+    },*/
+	{
+      "LogName": "<character> or <group> Translations",
+      "Action": "Include",
+      "FromFile": "Locale/{{language}}/content.json",
+      "When": {
+        "HasFile:{{FromFile}}": true
+      },
+    },
+	//Only restore this if having trouble with Stardew's 1.5 Swimsuit Stuff
+	//{
+    //  "Action": "Include",
+    //  "FromFile": "assets/Data/Swimsuits.json",
+    //  "LogName": "<character>'s Swimsuits or <group> Swimsuit pack"
+    //},
+  ]
+}

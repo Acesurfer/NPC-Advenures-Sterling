@@ -1,0 +1,50 @@
+{
+    "Changes": [
+      {
+        "LogName": "Companion dialogues for Sterling",
+        "Action": "EditData",
+        "Target": "Characters/Dialogue/Sterling",
+        //not everything present in this file needs filled in, this is taken from the template.
+        //These are dialogues for either certain companion events such as accepting to go on an adventure or dialogue for when you talk to the companion in certain maps.
+        //The list can be ammended by following the same format as entries like the Saloon or Farm, but replace that with the location name.
+        //dialogue can can also be set to only trigger at certain hearts.  Example below would be with the beach
+        //There is a seperate file to handle speech bubbles
+        "Entries": {
+          "companionAccepted": "Placeholder Accept",
+          "companionAccepted_Spouse": "Placeholder spouse accept",
+          "companionRejected": "Placeholder reject",
+          "companionRejectedNight": "Placeholder past curfew reject",
+          "companionRejectedNight_Spouse": "Placeholder past curfew reject spouse",
+          "companionDismiss": "Placeholder dismiss",
+          "companionDismissAuto": "Placeholder curfew dismiss",
+          "companionDismiss_Spouse": "Placeholder dismiss spouse",
+          "companionDismissAuto_Spouse": "placeholder curfew dismiss spouse",
+          "companionRecruited": "placeholder first time recurited text",
+          "companionRecruited_Spouse": "placeholder first time recruited spouse text",
+          "companionSuggest": "",
+          "companionSuggest_Yes": "",
+          "companionSuggest_No": "",
+          "companionOnce_Farm": "",
+          "companion_Farm": "",
+          "companion_Farm_Spouse": "",
+          "companion_Mine": "",
+          "companion_Forest": "",
+          "companion_Town_Night": "",
+          "companion_Town_fall": "",
+          "companion_Town_Rainy": "",
+          "companion_Saloon": "",
+          "companion_Hospital": "",
+          "companion_Blacksmith": "",
+          "companion_SeedShop": "",
+          "companion_Beach": "",
+          "companion_Beach_Night": "",
+          "companion_Beach_Night8": "",
+          "companion_ArchaeologyHouse": "",
+          "companion_BathHouse_MensLocker": "",
+          "companion_Mountain": "",
+          "companion_Desert": "",
+          "companion_SkullCave": ""
+        },
+      },
+    ]
+  }

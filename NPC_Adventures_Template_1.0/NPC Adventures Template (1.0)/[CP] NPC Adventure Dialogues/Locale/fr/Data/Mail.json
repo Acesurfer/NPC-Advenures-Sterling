@@ -1,0 +1,12 @@
+{
+  "Changes": [
+    {
+      "LogName": "Mail, French Translation",
+      "Action": "EditData",
+      "Target": "Data/Mail",
+      "Entries": {
+		//Copy mail entry here
+      },      
+    },
+  ]
+}

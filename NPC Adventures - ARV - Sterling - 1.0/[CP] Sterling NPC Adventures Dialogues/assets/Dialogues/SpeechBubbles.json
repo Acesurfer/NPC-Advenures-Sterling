@@ -1,0 +1,31 @@
+{
+    "Changes": [
+      {
+        //this file represents speech bubbles that will either randomly appear as ambient text or during certain conditions like a fight.
+        //the entries present here came from the template so again, they are a bit limited.
+        //the same process is true for this as with the dialogue, follow the same format to add other locations.  Locations can have more than one as shown below.
+        "LogName": "Sterling NPC Adventure Speech Bubbles",
+        "Action": "EditData",
+        "Target": "Strings/SpeechBubbles",
+        "Entries": {
+          "ambient_Farm_Sterling": "",
+          "ambient_Blacksmith_Sterling": "",
+          "ambient_Town_Sterling": "",
+          "ambient_Forest_Sterling": "",
+          "ambient_Woods_Sterling": "",
+          "ambient_Woods_Sterling~1": "",
+          "ambient_Mine_Sterling": "",
+          "ambient_Mine_Sterling~1": "",
+          "ambient_UndergroundMine_Sterling": "",
+          "ambient_Desert_Sterling": "",
+          "ambient_Mountain_Sterling": ".",
+          "ambient_Railroad_Sterling": "",
+          "ambient_Beach_Sterling": "",
+          "ambient_BugLand_Sterling": "",
+          "ambient_SkullCave_Sterling": "",
+          "ambient_Sewer_Sterling": "",
+          "fight_Sterling": ""
+        },
+      },
+    ]
+  }

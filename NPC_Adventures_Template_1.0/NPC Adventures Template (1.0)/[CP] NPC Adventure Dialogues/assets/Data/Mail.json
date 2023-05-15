@@ -1,0 +1,16 @@
+//Welcome to the easiest non-manifest file! The mail file just defines the letter attached if someone leaves their stuff in a companion's inventory.
+//An example is written from Sandy here, so you can see the syntax.
+{
+  "Changes": [
+    {
+      "LogName": "Character/CharacterPack NPC Adventures Mail Data",
+      "Action": "EditData",
+      "Target": "Data/Mail",
+      "Entries": {
+		  //Replace <character> with your character's name, then write between the quotes what you want the letter to look like. ^ is like hitting the enter key on the letter.
+        "purrplingcat.npcadventure.bagItemsSentLetter_<character>": "Hey sweetie~,^^Much as I'm tempted to keep these, you should have them back. I'd love to spend a day outside of the desert again with you!^^ -Sandy",
+		//You can also patch in different mails with (Content Patcher) when conditions! Use if you want the character to have a special note for their spouse instead, or something similar based on hearts.
+      },      
+    },
+  ]
+}

@@ -1,0 +1,20 @@
+//Welcome to the easiest non-manifest file!
+//You'll need your original Mail.json.
+
+{
+  "Changes": [
+    {
+      "LogName": "Character/CharacterPack NPC Adventures Mail Data",
+      "Action": "EditData",
+      "Target": "Data/Mail",
+      "Entries": {
+		  //Copy all mail into the entry field.
+		  //Then at the beginning of each bagItemsSentLetter prefix it with purrplingcat.npcadventure.
+		  //I'd recommend replacing bagItemsSentLetter with purrplingcat.npcadventure.bagItemsSentLetter, for simplicity. Example below.
+        "purrplingcat.npcadventure.bagItemsSentLetter_<character>": "Placeholder",
+		//Additionally, replace {0} and {1} if you used them with @ and the character name, if you used them. They don't work now.
+		//You can also patch in different mails now with when conditions! Use if you want the character to have a special note for their spouse instead.
+      },      
+    },
+  ]
+}

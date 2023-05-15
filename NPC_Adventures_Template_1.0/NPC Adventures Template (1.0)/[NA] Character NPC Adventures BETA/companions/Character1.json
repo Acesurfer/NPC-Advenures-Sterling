@@ -1,0 +1,88 @@
+//Welcome to your companion file! This is where most of your information on your character that NPC Adventures uses is added. 
+//Before continuing with this file, copy it for as many characters you have. If this is your only one, continue! Remember to replace Character with the name of your NPC.
+//Don't forget to title this file as the name of your character afterwards!
+{
+  "Format": "2.0",
+  "Name": "Character",
+  "Skills": [
+  //Give your character one or more skills. The example below is a forager/fighter.
+    { "Name": "forager" },
+    { "Name": "fighter" }
+	//Some skills have custom values, which you can modify. How to modify them is listed at https://next.npcadventures.dev/docs/modding/skills.
+	//If character is a Doctor, Fighter/Warrior (merged in this version, set IsWarrior to true for Warrior Perk), Scared, Shooter, or Charmer, then there is extra if you'd like to edit. Otherwise, this is as before.
+	//Warriors will need to refer to the documentation, as the merged class has some extra steps.
+  ],
+  "Rules": {
+    //The fun part! Specify rules for recruiting the companion. Marriageable companions are recommended to have a condition that refuses them or an entire subsection of dialogue goes unused (and may be out of character).
+	
+	/* Marriage */
+
+    // Character will always go on an adventure, unless you've pissed her off (below 8 hearts)
+    "O Character/!f Character 2000": "reject companionRejected_Spouse",
+    "O Character": "accept",
+
+    //Otherwise, specify something here to prevent recruitment without something. The example here was 5+ hearts, but the vanilla companions are locked off via heart events instead in this version.
+	//You can use event preconditions to specify when, as well as their inverse (e.g. !z is "must be fall").
+	//If you don't care and want them to always be recruitable, this is where you do it. An example is provided from Sandy's beta pack.
+	
+	//Requires it to not be Fall 15
+	"u 15/!z fall": "reject companionRejected_Fall15",
+	
+	/* Regular */
+
+    // Requires Character to be at 5 hearts or more
+    "!f Character 1250": "reject",
+    
+    // She is recruitable anytime
+    "": "accept"
+  },
+  
+  //If you'd prefer to merge characters needing to be paid for, unlocked by mail, etc. do so here. Instructions at https://next.npcadventures.dev/docs/modding/freelancers
+  
+  "Buffs": {
+	//Potential buffs are Farming, Fishing, Mining, Farming, Foraging, Crafting, MaxStamina (MaxEnergy in game), MagneticRadius, Speed, Defense, and Attack. Crafting is 1.6, I don't know what that is, but it's there.
+	//Any other buff values are not valid and will be ignored (as well as if you use MaxEnergy instead of MaxStamina). Pick your buffs here!
+	"Mining": 2,
+	"Speed": 2,
+	"MaxStamina": 50,
+  },
+  "BuffsDescription": "[Character.buffs]", //i18n key. Copy the i18n key between the [] for your NA i18n file after this.
+  
+  
+  "Weapons": {
+	 // Weapons! This will define how strong your character is, although they generally need a skill allowing them to be capable of fighting to actually utilize this section.
+	 // 0 is the baseline weapon. 1-10 corresponds to the Player's combat level, so the companion will grow with them. If a level is not defined, the character will use the highest level weapon they can relative to player's level.
+	 //(Example: If Player is combat 4, using the below, they would use a Forest Sword, as they cannot use Level 5's Insect Head yet.)
+	 //If you don't want them to use weapons, you can delete this section.
+	 
+	 // Try to balance blade usage based on your character. If your character is a renowned adventurer, an Infinity Blade would make sense at 10! If they aren't, consider a lower tier weapon.
+    "0": "Wooden Blade",
+    "2": "Forest Sword",
+    "5": "Insect Head",
+    "7": "Bone Sword",
+    "8": "Neptune's Glaive",
+    "9": "Ossified Blade"
+  },
+  "IdleBehaviors": [
+    //Put the character animations in here. Custom ones can be defined in a CP pack.
+	//Otherwise, animations already defined in the character file (e.g. flor_read or juliet_yoyo) can be put in Animations and will be read normally.
+	{
+      "Behavior": "Animate",
+      "Animations": [
+        "Character_yoyo"
+      ],
+      "Tendency": 3,
+      "MinDuration": 10,
+      "MaxDuration": 30
+    },
+    //Leave this alone, for simplicity. This will allow the character to look around while idle.
+	{
+      "Behavior": "Lookaround",
+      "FaceMinSeconds": 6,
+      "FaceMaxSeconds": 10,
+      "Tendency": 2.5,
+      "MinDuration": 10,
+      "MaxDuration": 30
+    }
+	]
+}

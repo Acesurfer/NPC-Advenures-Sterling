@@ -1,0 +1,4 @@
+{
+  //this is the text present when the player hovers over the buff provided when they adventure with Sterling
+    "Sterling.buffs": "placeholder buff text",
+  }

@@ -1,0 +1,13 @@
+// You will need your original SpeechBubbles.json. Copy its contents in where stated!
+{
+  "Changes": [
+    {
+      "LogName": "<character> NPC Adventure Speech Bubbles",
+      "Action": "EditData",
+      "Target": "Strings/SpeechBubbles",
+      "Entries": {
+		  //Copy bubbles here
+	  },
+    },
+  ]
+}

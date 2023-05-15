@@ -1,0 +1,13 @@
+//Copy prior translated mail here. If none, get update from translator or keep as the main language until otherwise translated.
+{
+  "Changes": [
+    {
+      "LogName": "Mail, French Translation",
+      "Action": "EditData",
+      "Target": "Data/Mail",
+      "Entries": {
+		//Copy mail entry here
+      },      
+    },
+  ]
+}

@@ -1,0 +1,20 @@
+//As usual, this is the manifest. Title it your mod, put the usual versions up, etc. The minimum version *must* be the alpha version of NPC Adventures or NPC Adventures will block the pack.
+//Otherwise, this is as normal. Replace as needed. A reminder to not under any circumstance rename the "companions" folder.
+{
+  "Name": "Character for NPC Adventures",
+  "Author": "Username",
+  "Version": "2.0.0",
+  "Description": "Description here. BETA pack for newest version of NPC Adventures.",
+  "UniqueID": "username.characternpcadventures",
+  "MinimumApiVersion": "3.13.0",
+  //Update Key Here
+  "ContentPackFor": {
+    "UniqueID": "purrplingcat.npcadventure",
+	"MinimumVersion": "1.0.0-alpha"
+  },
+  "Dependencies": [
+    {
+      "UniqueID": "purrplingcat.npcadventure"
+    }
+  ]
+}

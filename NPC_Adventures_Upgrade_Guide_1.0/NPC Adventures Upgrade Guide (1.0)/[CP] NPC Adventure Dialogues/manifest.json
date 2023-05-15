@@ -1,0 +1,13 @@
+//If you're upgrading, you're probably familiar how to write a manifest, so I've only changed the things below for replacing purposes. 
+
+{
+  "Name": "Character for NPC Adventures Dialogue",
+  "Author": "Username",
+  "Version": "Version Number",
+  "Description": "Write your mod description here! Remember for Purrplingcat's NPC Adventures",
+  "UniqueID": "username.modname",
+  "UpdateKeys": [ "???" ], //Update Key here
+  "ContentPackFor": {
+      "UniqueID": "Pathoschild.ContentPatcher"
+   },
+}

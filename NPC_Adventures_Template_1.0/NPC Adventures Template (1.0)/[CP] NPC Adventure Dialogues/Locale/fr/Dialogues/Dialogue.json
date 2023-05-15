@@ -1,0 +1,13 @@
+// Copy the dialogues from the main language here, then translate each line.
+{
+  "Changes": [
+    {
+      "LogName": "Dialogues, French Translation", //Change LogName to translation
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/<character>", //REMEMBER TO CHANGE <character> TO NPC IN QUESTION!
+      "Entries": {
+		//Copy in dialogues here!
+      },
+    },
+  ]
+}

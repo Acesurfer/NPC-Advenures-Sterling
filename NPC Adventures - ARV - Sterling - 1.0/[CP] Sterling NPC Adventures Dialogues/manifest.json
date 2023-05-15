@@ -1,0 +1,11 @@
+{
+    "Name": "Sterling for NPC Adventures Dialogues",
+    "Author": "Acesurfer and HimeTarts",
+    "Version": "1.0.0",
+    "Description": "Adds Sterling from Always Raining in the Valley to PurrplingCat's NPC Adventures.",
+    "UniqueID": "Acesurfer.sterling.npcadventuresdialogues",
+    "UpdateKeys": [ null ],
+    "ContentPackFor": {
+      "UniqueID": "Pathoschild.ContentPatcher"
+    }
+  }

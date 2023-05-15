@@ -1,0 +1,6 @@
+{
+  // Companion buff descriptions
+  //As you may see here, this is really simple and can honestly be ignored if you don't want to deal with an i18n file. You'll just need your old buff descriptions JSON here.
+  //Otherwise, name it character.buffs and write in the buff descriptions here! It'll be used shortly in the final file.
+  "juliet.buffs": "Something about Juliet and her devil-may-care attitude invigorates you and gives you a surge of adrenaline.#You gain +2 Speed, +2 Mining and a bonus of +50 maximum energy.",
+}

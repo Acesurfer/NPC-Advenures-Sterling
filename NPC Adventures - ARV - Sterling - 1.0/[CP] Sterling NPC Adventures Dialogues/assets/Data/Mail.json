@@ -1,0 +1,13 @@
+{
+  //This file is the letter that is sent to the player if they leave any items with a companion after the companion is dismissed for the day.
+    "Changes": [
+      {
+        "LogName": "Sterling/SterlingPack NPC Adventures Mail Data",
+        "Action": "EditData",
+        "Target": "Data/Mail",
+        "Entries": {
+                "purrplingcat.npcadventure.bagItemsSentLetter_Sterling": "placeholder mail text",
+        },      
+      },
+    ]
+  }

@@ -1,0 +1,21 @@
+//This is an optional custom foraging JSON. If your character is a forager, they will forage for items from a baseline list unless this JSON is defined.
+//This particular example is Sandy's. She only forages flowers, a few regular forage items, and can get a user Magma Caps/Ginger on the Island.
+//Quality Categories, if defined, will allow forages to be higher than regular quality. Use if you'd like higher value forages.
+{
+  "Changes": [
+    {
+      "LogName": "<Character> NPC Adventures Forage Data",
+      "Action": "EditData",
+      "Target": "Mods/purrplingcat.npcadventure/Forages",
+      "Entries": {
+          "spring": "18 22 597 591",
+		  "summer": "593 376 402 421",
+		  "fall": "421 595 410",
+		  "winter": "418 283 414",
+		  "Desert": "88 90",
+		  "IslandSouth": "851 829",
+		  "qualityCategories": "-80 -81",
+      }      
+    }
+  ]
+}

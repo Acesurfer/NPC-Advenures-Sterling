@@ -1,0 +1,4 @@
+{
+	//This file is deprecated, but can still be used if the character's beach sprites are not showing up. Otherwise, this goes unused. Example below.
+  "Juliet": "Characters/Juliet_Beach",
+}
